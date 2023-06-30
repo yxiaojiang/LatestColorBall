@@ -12,10 +12,12 @@ public class ColorBall : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[]
 		{
 			"Core", "CoreUObject", "Engine", "InputCore",
-			"SQLiteCore", "SQLiteSupport"
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(new string[]
+		{
+			"SQLiteCore", "SQLiteSupport","Json", "JsonUtilities","HTTP"
+		});
 
 		PublicIncludePaths.AddRange(new string[]
 		{

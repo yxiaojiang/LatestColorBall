@@ -10,6 +10,12 @@
 
 //#pragma comment(lib, "sqlite3.lib")
 
+
+struct QueryResult
+{
+	TArray<FString> ColumnValues;
+};
+
 /**
  * 
  */
@@ -22,7 +28,7 @@ public:
 	
 	sqlite3* CBDatabase = nullptr;
 
-	TArray<int> EveryPeriod;
+	TArray<FString> EveryPeriod;
 	TArray<FString> EveryPeriodNumber;
 
 	//_________________________________-------------------------------------------------//
@@ -37,11 +43,13 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void FillColorBallTableDatas();
-
+	
 	UFUNCTION(BlueprintCallable)
 	void QueryDataFromTable();
 	
 	UFUNCTION(BlueprintCallable)
 	void InsertDataIntoTable();
+
+	void QueryAndModifyData();
 	
 };
